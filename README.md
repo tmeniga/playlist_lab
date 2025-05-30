@@ -11,14 +11,13 @@ Learn-by-building project that teaches OAuth, APIs, and Docker.
 **1. Authenticate with Spotify (core scope):**
 - As a logged-in user, I can connect my Spotify account so the app can read my library and manage playlists on my behalf.
 
-**2. Genrate "Era" playlists (core scope):**
-- I choose a cut-off year (default 2000); the app splits my Liked Songs into two playlists: My Pre-2000 Favorites and My Post-2000 Favorites, no 50-track limit as spotify generated playlists have.
+**2. Generate "Era" playlists (core scope):**
+- I choose a cut-off year (default 2000); the app splits my Liked Songs into two playlists: My Pre-2000 Favorites and My Post-2000 Favorites, with no 50-track cap like Spotify’s auto-lists.
 
-**3. Generate “Genre-specific” playlists (stretch goal):**
+**3. Generate “Genre-specific” playlists (stretch):**
+- I pick “German rap” (or any Spotify genre/artist list); the app creates/updates a playlist containing all matching liked tracks, with no 50-track cap like Spotify’s auto-lists.
 
-- I pick “German rap” (or any Spotify genre/artist list); the app creates/updates a playlist containing all matching liked tracks, unlike spotify wich can give you genre based playlist with only 50 songs.
-
-**4. Recursive Radio (stretch goal):**
+**4. Recursive Radio (stretch):**
 - Starting from a seed track or playlist, the app keeps hitting Spotify’s “recommendations” endpoint, adds newly surfaced tracks to a growing playlist, and stops after N iterations or M total songs.
 
 **5. Re-run / refresh (core scope):**
@@ -43,7 +42,7 @@ flowchart TD
 * **Hosting Service** (Render, Fly.io, Railway, or own VPS)  
   - A place on the internet where those Docker boxes run.
 
-### How it all flows
+### Process Flow
 
 1. User opens website ➜ clicks “Log in with Spotify”.
 2. Spotify asks them to approve ➜ sends a “yes” back to Tiny Web Server.
